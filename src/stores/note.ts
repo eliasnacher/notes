@@ -1,20 +1,22 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import { v4 as uuidV4 } from 'uuid'
+import type { Note } from '@/types/note'
 
 export const useNoteStore = defineStore('note', {
   state: () => ({
-    notes: [],
+    notes: [] as Note[],
   }),
   actions: {
-    addNote(title: string, text: string, icon: string): void {
+    addNote(title: string, text: string, icon: string): string {
+      const id = uuidV4()
       this.notes.push({
-        id: uuidV4(),
+        id: id,
         title: title,
         text: text,
         icon: icon,
-      })
-      console.log(this.notes)
+      })      
+      return id
     },
   },
+  persist: true
 })

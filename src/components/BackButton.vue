@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import router from '../router'
+import router from '@/router'
 
 const goBack = () => {
   router.back()
@@ -26,7 +26,7 @@ const goBack = () => {
   border: solid 1px #555;
   user-select: none;
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
 }
 

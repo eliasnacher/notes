@@ -20,20 +20,14 @@ export default {
 <template>
   <div class="item">
     <div class="icon">
-      <i>
-        <slot name="icon">{{ icon }}</slot>
-      </i>
+      <img :src="icon" />
     </div>
     <div class="detail">
       <div class="title">
-        <h3>
-          <slot name="title">{{ title }}</slot>
-        </h3>
+        <h3>{{ title }}</h3>
       </div>
       <div class="text">
-        <p>
-          <slot name="text">{{ text }}</slot>
-        </p>
+        <p>{{ text }}</p>
       </div>
     </div>
   </div>
@@ -54,8 +48,13 @@ export default {
   display: inline-block
 }
 
+.icon img {
+  width: 100%;
+}
+
 .detail {
-  width: calc(100% - 150px);
-  display: inline-block
+  width: calc(100% - 190px);
+  display: inline-block;
+  padding: 0px 20px;
 }
 </style>

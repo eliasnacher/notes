@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BackButton from '../components/BackButton.vue'
-import { useNoteStore } from '../stores/note'
+import BackButton from '@/components/BackButton.vue'
+import { useNoteStore } from '@/stores/note'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -27,7 +27,7 @@ console.log(note)
 
 <style scoped>
   input[type=text], textarea {
-    width:calc(100% - 60px);
+    width:calc(100% - 65px);
     color:white;
     background-color: #555;
     border: solid 1px #222;
