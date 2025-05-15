@@ -1,0 +1,1 @@
+docker run --rm -v $(pwd):/app vue-capacitor-builder bash -c "./gradlew assembleDebug"
