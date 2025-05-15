@@ -6,7 +6,7 @@ import router from '@/router'
 const noteStore = useNoteStore()
 
 const openNote = (id: string) => {
-  router.push(`/note/${id}`)
+  router.push({ name: 'note', params: { id } })
 }
 </script>
 
@@ -14,9 +14,6 @@ const openNote = (id: string) => {
   <NoteToast
     v-for="(note, index) in noteStore.notes"
     @click="openNote(note.id)"
-    :key="index"
-    :title="note.title"
-    :text="note.text"
-    :icon="note.icon"
+    :note="note"
   />
 </template>

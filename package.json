@@ -20,8 +20,10 @@
   },
   "dependencies": {
     "@capacitor/android": "^7.2.0",
+    "@capacitor/app": "^7.0.1",
     "@capacitor/cli": "^7.2.0",
     "@capacitor/core": "^7.2.0",
+    "node-emoji": "^2.2.0",
     "pinia": "^3.0.1",
     "pinia-plugin-persistedstate": "^4.3.0",
     "uuid": "^11.1.0",

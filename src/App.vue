@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { App } from '@capacitor/app'
 import { RouterLink, RouterView } from 'vue-router'
+import router from '@/router'
+
+
+const backHandler = App.addListener('backButton', () => {
+  router.back()
+})
+
 
 let notes = [
   {

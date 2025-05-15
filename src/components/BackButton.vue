@@ -11,23 +11,20 @@ const goBack = () => {
 </script>
 
 <template>
-  <div class="item" @click="goBack()">🢀</div>
+  <div class="item" @click="goBack()">Back</div>
 </template>
 
 <style lang="scss" scoped>
 .item {
-  width: 50px;
-  height: 50px;
+  padding: 10px 20px;
   background-color: #222;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
-  line-height: 47px;
   border-radius: 5px;
   border: solid 1px #555;
   user-select: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  display: inline-block;
+  margin: 0px 5px;
 }
 
 .item:hover {
