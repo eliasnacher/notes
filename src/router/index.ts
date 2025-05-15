@@ -19,14 +19,14 @@ const router = createRouter({
       beforeEnter: (to, from, next) => {
         const noteStore = useNoteStore()
         const noteId = to.params.id
-        const exists = noteStore.notes.some(note => note.id === noteId)
+        const exists = noteStore.notes.some((note) => note.id === noteId)
 
         if (!exists) {
           next({ name: 'home' })
         } else {
           next()
         }
-      }
+      },
     },
   ],
 })

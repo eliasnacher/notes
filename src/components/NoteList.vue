@@ -11,9 +11,5 @@ const openNote = (id: string) => {
 </script>
 
 <template>
-  <NoteToast
-    v-for="(note, index) in noteStore.notes"
-    @click="openNote(note.id)"
-    :note="note"
-  />
+  <NoteToast v-for="(note, index) in noteStore.notes" @click="openNote(note.id)" :note="note" />
 </template>

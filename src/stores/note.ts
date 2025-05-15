@@ -14,9 +14,9 @@ export const useNoteStore = defineStore('note', {
         title: title,
         text: text,
         icon: icon,
-      })      
+      })
       return id
     },
   },
-  persist: true
+  persist: true,
 })

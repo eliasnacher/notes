@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="item">
@@ -8,9 +7,9 @@
 </template>
 
 <style scoped>
-  .item {
-    position: fixed;
-    bottom: 10px;
-    right: 5px;
-  }
+.item {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+}
 </style>

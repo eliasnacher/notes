@@ -5,7 +5,7 @@ import router from '@/router'
 const noteStore = useNoteStore()
 
 const deleteNote = (id: string) => {
-  const index = noteStore.notes.findIndex(note => note.id === id)
+  const index = noteStore.notes.findIndex((note) => note.id === id)
   if (index !== -1) {
     noteStore.notes.splice(index, 1)
   }

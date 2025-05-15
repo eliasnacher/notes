@@ -4,11 +4,7 @@ import router from '@/router'
 
 const store = useNoteStore()
 const addNewNoteToStore = () => {
-  let noteId = store.addNote(
-    '',
-    '',
-    '',
-  )
+  let noteId = store.addNote('', '', '')
   router.push(`/note/${noteId}`)
 }
 </script>

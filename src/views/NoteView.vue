@@ -31,14 +31,14 @@ const note = noteStore.notes.find((note) => note.id === noteId) as Note
 </template>
 
 <style scoped>
-  input[type=text], textarea {
-    width:calc(100% - 65px);
-    color:white;
-    background-color: #222;
-    border: none;
-    border-radius: 5px;
-    padding:20px;
-    margin: 10px;
-  }
-
+input[type='text'],
+textarea {
+  width: calc(100% - 65px);
+  color: white;
+  background-color: #222;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
 </style>
