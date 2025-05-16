@@ -1,7 +1,39 @@
+@import 'themes/dark.css';
+
 body {
-  padding: 0;
-  background: radial-gradient(#222, #000);
-  color: white;
+  padding: 10px 10px 50px 10px;
+  background: radial-gradient(var(--color-background-gradient, var(--color-background)));
+  color: var(--color-text);
   font-family: Helvetica;
   background-attachment: fixed;
+}
+
+.app-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  user-select: none;
+  display: inline-block;
+  margin: 0px 5px;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border: solid 1px var(--color-secoundary);
+}
+
+.app-button:hover {
+  opacity: 0.8;
+}
+
+.app-button-danger {
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  user-select: none;
+  display: inline-block;
+  margin: 0px 5px;
+  cursor: pointer;
+  background-color: var(--color-danger);
+  border: solid 1px color-mix(in srgb, var(--color-danger) 60%, black 40%);;
 }

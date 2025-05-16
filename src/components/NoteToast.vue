@@ -17,13 +17,11 @@ defineProps<Props>()
       class="icon"
       :style="{ '--icon': `url(${note.icon === '' ? defaultImg : note.icon})` }"
     ></div>
-    <div class="detail">
-      <div class="title">
-        <h3>{{ note.title == '' ? 'Sin titulo' : note.title }}</h3>
-      </div>
-      <div class="text">
-        <p>{{ note.text }}</p>
-      </div>
+    <div class="title">
+      <span>{{ note.title == '' ? 'Sin titulo' : note.title }}</span>
+    </div>
+    <div class="text">
+      <span>{{ note.text }}</span>
     </div>
   </div>
 </template>
@@ -39,8 +37,8 @@ defineProps<Props>()
 }
 
 .icon {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
   vertical-align: top;
   background-image: var(--icon);
@@ -48,18 +46,22 @@ defineProps<Props>()
   background-repeat: no-repeat;
 }
 
-.detail {
+.title {
   display: inline-block;
-  vertical-align: top;
-  padding: 0px 20px;
-  height: 150px;
+  padding-left: 20px;
+  max-height: 50px;
+  max-width: calc(100% - 90px);
+  font-weight: bold;
 }
 
 .title {
-  height: 20px;
+  max-height: 100px;
+  vertical-align: top;
 }
 
 .text {
-  height: 20px;
+  padding-top:10px;
+  max-height: 200px;
+  overflow-y: scroll;
 }
 </style>
